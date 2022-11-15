@@ -6,19 +6,16 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const data = getDummyData();
-  // function handleEvent() {
-  //   var text = document.getElementsByClassName("attributes");
-  //   if (text === "none") {
-  //     text.style.display = "block";
-  //   } else {
-  //     text.style.display = "none";
-  //   }
-  // }
 
   const handleEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     const cards = document.getElementsByClassName("message-wrapper");
+    delete data[0];
+    delete data[1];
+    delete data[2];
+    console.log(data);
   };
+
   return (
     <div className="message-wrapper">
       <h2>My Inbox</h2>
